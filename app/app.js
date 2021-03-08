@@ -14,7 +14,7 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'connected-react-router';
 import history from 'utils/history';
-import 'sanitize.css/sanitize.css';
+import 'fontsource-roboto';
 
 // Import root app
 import App from 'containers/App';
@@ -37,7 +37,6 @@ import { translationMessages } from './i18n';
 const initialState = {};
 const store = configureStore(initialState, history);
 const MOUNT_NODE = document.getElementById('app');
-
 const render = messages => {
   ReactDOM.render(
     <Provider store={store}>

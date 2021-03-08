@@ -1,6 +1,7 @@
 import { createSelector } from 'reselect';
 
 const selectRouter = state => state.router;
+const selectApp = state => state.app;
 
 const makeSelectLocation = () =>
   createSelector(
@@ -8,4 +9,10 @@ const makeSelectLocation = () =>
     routerState => routerState.location,
   );
 
-export { makeSelectLocation };
+const makeSelectDrawerOpen = () =>
+  createSelector(
+    selectApp,
+    appState => appState.drawerOpen,
+  );
+
+export { makeSelectLocation, makeSelectDrawerOpen };

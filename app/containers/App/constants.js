@@ -8,3 +8,5 @@
  * Follow this format:
  * export const YOUR_ACTION_CONSTANT = 'yourproject/YourContainer/YOUR_ACTION_CONSTANT';
  */
+
+export const TOGGLE_DRAWER = 'vuohiportal-ui/App/TOGGLE_DRAWER';
