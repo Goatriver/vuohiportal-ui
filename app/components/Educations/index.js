@@ -29,7 +29,7 @@ function Educations(props) {
             key={education.facility_name}
           >
             <Grid item xs={2}>
-              <Typography>{gradStr}</Typography>
+              <Typography variant="caption">{gradStr}</Typography>
             </Grid>
             <Grid item xs={10}>
               <Typography>{education.facility_name}</Typography>

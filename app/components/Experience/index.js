@@ -9,9 +9,11 @@ import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import useStyles from './styles';
 
 function Experience(props) {
   const { experiences } = props;
+  const classes = useStyles();
   return (
     <div>
       {experiences.map(experience => {
@@ -29,7 +31,10 @@ function Experience(props) {
             key={experience.corporate}
           >
             <Grid item xs={2}>
-              <Typography>{`${startStr} — ${endStr}`}</Typography>
+              <Typography
+                className={classes.fromTo}
+                variant="caption"
+              >{`${startStr} - ${endStr}`}</Typography>
             </Grid>
             <Grid item xs={10}>
               {experience.link ? (
